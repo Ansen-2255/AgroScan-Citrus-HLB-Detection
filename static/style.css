@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background image */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("/static/bg.jpg") center/cover no-repeat;
+  filter: brightness(0.9);
+  z-index: -2;
+}
+
+/* Dark overlay */
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GLASS CARD */
+.glass-card {
+  width: 1050px;                /* slightly reduced width */
+  padding: 60px 70px;           /* EVEN padding (top/bottom & left/right) */
+  border-radius: 30px;
+
+  /* Softer, lighter glass gradient */
+  background: linear-gradient(
+    135deg,
+    rgba(60, 120, 80, 0.45),
+    rgba(40, 90, 60, 0.35)
+  );
+
+  /* Reduced blur intensity */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  color: white;
+
+  /* Softer shadow */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.28);
+
+  position: relative;
+}
+
+
+/* NAV INSIDE GLASS */
+.glass-nav {
+  margin-bottom: 40px;
+}
+
+.glass-nav .logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+/* TEXT */
+.glass-card h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.glass-card p {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.65;
+  max-width: 440px;
+  margin-bottom: 36px;
+}
+
+
+/* BUTTON */
+.glass-card button {
+  padding: 14px 34px;
+  border: none;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2f5d3b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.leaf-overlay {
+  position: fixed;
+  right: 0;                 /* stem touches screen edge */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.leaf-overlay img {
+  width: 420px;
+
+  /* 🔥 THIS IS THE KEY PART */
+  transform-origin: right center;   /* stem is anchor */
+  transform: rotate(-6deg);         /* natural tilt */
+
+  opacity: 0.85;
+  filter: drop-shadow(0 30px 45px rgba(0,0,0,0.45));
+}
+
+
+/* detect.html*/
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2f5d3b;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+

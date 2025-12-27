@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Disease Detection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/detect.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🌿 AgroScan</div>
+    <nav><b>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="#how">How to use</a>
+      <a href="#story">About</a>
+      
+      <a href="https://ansen-portfolio.onrender.com/contact.html">Contact</a></b>
+    </nav>
+    
+  </header>
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <!-- LEFT SIDE: TEXT -->
+    <div class="hero-text">
+      <h1>Save your crops by<br>detecting disease<br>in seconds.</h1>
+      <p>
+        We use image classification and machine learning to recognize
+        plant diseases before they can do more damage.
+      </p>
+
+      <div class="buttons">
+        <button class="primary" onclick="window.location.href='/upload'">
+          UPLOAD AN IMAGE
+        </button>
+
+        <a href="https://www.cdfa.ca.gov/citrus/pests_diseases/hlb/PestProfile.html"
+   class="secondary" 
+   target="_blank">
+  LEARN MORE
+</a>
+
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: IMAGE -->
+    <div class="hero-illustration">
+      <img src="/static/illustration.png" alt="Plant illustration">
+    </div>
+
+  </div>
+</section>
+
+
+  <section class="how-it-works" id="how">
+
+  <div class="how-text">
+    <h2>Keeping your crops healthy<br>has never been this simple.</h2>
+
+    <p class="subtitle">
+      We cut the time and cost that it takes to detect plant disease
+      by providing an instant diagnosis.
+    </p>
+
+    <div class="steps">
+      <div class="step active">
+        <h4>Step 1: Upload or take a photo of your crop</h4>
+        <p>
+          Welcome to MediCrop. Choose how you want to send the image to us
+          so we can take a closer look.
+        </p>
+      </div>
+
+      <div class="step">
+        <h4>Step 2: Receive a diagnosis in a few seconds</h4>
+        <p>
+          We scan the image, and our machine learning model concludes
+          what disease your plant has with a percentage of confidence.
+        </p>
+      </div>
+
+      <div class="step">
+        <h4>Step 3: Learn more about the disease</h4>
+        <p>
+          Once a disease is recognized, we give you more information
+          about it so you can be aware.
+        </p>
+      </div>
+
+      <div class="step">
+        <h4>Step 4: Cure your crops with our treatment plan</h4>
+        <p>
+          We provide best practice content and recommend affordable
+          products that will enable you to get your crops healthy again.
+        </p>
+      </div>
+    </div>
+
+    <button class="try-btn" onclick="window.location.href='/upload'">TRY NOW</button>
+  </div>
+
+  <div class="how-image">
+    <img src="/static/phone.png" alt="Mobile app preview">
+  </div>
+
+</section>
+
+<section class="our-story" id="story">
+
+  <div class="story-text">
+    <h2>Our Story</h2>
+
+    <p>
+      Plant disease is one of the most significant challenges to farmers around the world,
+      and destroys 15% of all food grown globally. In addition, the process of identifying
+      plant disease involves expensive and time-consuming laboratory testing, which is a
+      luxury that most farmers don't have.
+    </p>
+
+    <p>
+      We want to change that, and help those who are growing the food that eat.
+    </p>
+
+    <p>
+      Using MediCrop, farmers can quickly detect plant disease in its earliest stages and
+      treat it effectively, reducing crop waste and maximizing their profit potential.
+      We aim to provide a cost and time efficient solution that can be easily used with
+      any smartphone device.
+    </p>
+
+    <p>
+      We support farmers of all backgrounds and strive to make our app accurate,
+      informative, and easy to use. Ultimately, we want to build the largest
+      data-driven agricultural community.
+    </p>
+  </div>
+
+  <div class="story-stats">
+    <div class="stat-card">
+      <p class="stat-title">Our app is tested within</p>
+      <h3>98.6%</h3>
+      <p class="stat-sub">accuracy</p>
+    </div>
+
+    <div class="stat-card">
+      <p class="stat-title">We can identify</p>
+      <h3>29</h3>
+      <p class="stat-sub">different plant disease</p>
+    </div>
+
+    <div class="stat-card">
+      <p class="stat-title">We support</p>
+      <h3>14</h3>
+      <p class="stat-sub">crops</p>
+    </div>
+
+    <div class="stat-card">
+      <p class="stat-title">We support</p>
+      <h3>4</h3>
+      <p class="stat-sub">different languages</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="team" id="team">
+
+  <h2 class="team-title">About me</h2>
+
+  <div class="team-grid">
+
+    <div class="team-card">
+      <img src="/static/team1.jpg" alt="Ansen" class="team-photo">
+
+      <h3>Ansen</h3>
+      <br>
+      <p>
+        <p>
+  Exploring machine learning <br> and computer vision  to build<br>
+  real-world AI solutions for <br> agriculture.
+</p>
+
+      </p>
+      <a href="https://ansen-portfolio.onrender.com/contact.html" class="profile-btn">View Profile</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="site-footer" id="footer">
+
+  <div class="footer-top">
+    <p class="footer-tagline">
+      WE WANT TO CREATE A HEALTHY AND GREEN WORLD
+    </p>
+
+    <h2>We'll keep you updated as we grow.</h2>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="socials">
+      <a href="#">f</a>
+      <a href="#">◎</a>
+      <a href="#">🐦</a>
+    </div>
+
+    <div class="resources">
+      <h4>RESOURCES</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- Chatbot Button -->
+<div id="chatbot-toggle">
+  <i class="fa-solid fa-comments"></i>
+</div>
+
+<!-- Chatbot Window -->
+<div id="chatbot">
+  <div class="chat-header">
+    🌱 AgroScan Bot
+    <span id="chatbot-close">&times;</span>
+  </div>
+
+  <div class="chat-body" id="chat-body">
+    <div class="bot">Hi 👋 I’m AgroScan Bot. How can I help you?</div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+const chatbot = document.getElementById("chatbot");
+const toggleBtn = document.getElementById("chatbot-toggle");
+const closeBtn = document.getElementById("chatbot-close");
+const chatBody = document.getElementById("chat-body");
+
+toggleBtn.onclick = () => {
+  chatbot.style.display =
+    chatbot.style.display === "flex" ? "none" : "flex";
+};
+
+closeBtn.onclick = () => {
+  chatbot.style.display = "none";
+};
+
+async function sendMessage() {
+  const input = document.getElementById("user-input");
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  chatBody.innerHTML += `<div class="user">${msg}</div>`;
+  input.value = "";
+
+  try {
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: msg })
+    });
+
+    const data = await res.json();
+    chatBody.innerHTML += `<div class="bot">${data.reply}</div>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+  } catch {
+    chatBody.innerHTML += `<div class="bot">⚠️ Server not running</div>`;
+  }
+}
+const inputField = document.getElementById("user-input");
+
+inputField.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // prevent line break
+    sendMessage();
+  }
+});
+</script>
+
+
+<script>
+  async function handleFileUpload() {
+    const fileInput = document.getElementById('imageInput');
+    const resultDiv = document.getElementById('diagnosis-result');
+    const predText = document.getElementById('prediction-text');
+    const confText = document.getElementById('confidence-text');
+
+    if (fileInput.files.length === 0) return;
+
+    const formData = new FormData();
+    formData.append('file', fileInput.files[0]);
+
+    // Show loading state
+    resultDiv.style.display = 'block';
+    predText.innerText = "Analyzing image...";
+
+    try {
+        const response = await fetch('/predict', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+        
+        if (data.prediction) {
+            predText.innerText = `Diagnosis: ${data.prediction}`;
+            confText.innerText = `Confidence: ${data.confidence}`;
+        } else {
+            predText.innerText = "Error: " + data.error;
+        }
+    } catch (error) {
+        predText.innerText = "❌ Analysis failed. Is the server running?";
+    }
+}
+</script>
+
+
+
+</body>
+</html>
